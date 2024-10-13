@@ -1,0 +1,145 @@
+/* Center the form in the middle of the page with moving gradient background */
+.sign-up-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(270deg, 
+    #b2a6e1, /* Soft lavender */
+    #c6d8f0, /* Light blue */
+    #f8c9d4, /* Pale pink */
+    #e2f5e3, /* Light mint */
+    #e0d0b4, /* Soft beige */
+    #d2b3d4, /* Light mauve */
+    #b3e0e5, /* Pale teal */
+    #c4e0e8  /* Light cyan */
+  );
+    background-size: 1500% 1500%; /* Increase the size for smoother movement */
+    animation: gradientMove 12s ease infinite; /* Apply the gradient animation */
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%; /* Gradient starts on the left */
+    }
+    50% {
+      background-position: 100% 50%; /* Gradient moves to the right */
+    }
+    100% {
+      background-position: 0% 50%; /* Gradient returns to the left */
+    }
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size:30px;
+  }
+  
+  /* Make the sign-up form translucent */
+  .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1); /* White background with 60% opacity */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-size: 20px;
+
+    color: #555;
+  }
+  
+  /* Make the input boxes translucent */
+  input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Translucent border */
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2); /* Translucent background for input fields */
+   // backdrop-filter: blur(10px); /* Optional: adds a slight blur effect behind the input */
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Input focus styles */
+  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: rgba(0, 123, 255, 0.6); /* Slightly more opaque border on focus */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly increase opacity on focus */
+  }
+  
+  button[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  /* Home.css */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7fafc; /* Light gray background */
+}
+
+.home-card {
+  background-color: #ffffff; /* White card background */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2d3748; /* Dark text */
+  margin-bottom: 20px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-button {
+  background-color: #4299e1; /* Blue background */
+}
+
+.dashboard-button:hover {
+  background-color: #3182ce; /* Darker blue on hover */
+}
+
+.logout-button {
+  background-color: #f56565; /* Red background */
+}
+
+.logout-button:hover {
+  background-color: #e53e3e; /* Darker red on hover */
+}
